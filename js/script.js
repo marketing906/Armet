@@ -227,6 +227,26 @@ function validateInput(input) {
     return valid;
 }
 
+function buildMailtoUrl(form, data) {
+    const recipientEmail = form.dataset.recipientEmail || 'facturacion@armetpro.com';
+    const subject = `Nuevo requerimiento web - ${data.company}`;
+    const selectedService = form.querySelector('select[name="service"] option:checked');
+    const serviceLabel = selectedService ? selectedService.textContent : data.service;
+    const body = [
+        'Se recibio un nuevo requerimiento desde la web de ARMET.',
+        '',
+        `Nombre: ${data.name}`,
+        `Correo: ${data.email}`,
+        `Empresa o industria: ${data.company}`,
+        `Tipo de solucion requerida: ${serviceLabel}`,
+        '',
+        'Mensaje:',
+        data.message
+    ].join('\n');
+
+    return `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 if (contactForm) {
     const inputs = contactForm.querySelectorAll('input, select, textarea');
 
@@ -252,12 +272,12 @@ if (contactForm) {
         }
 
         const data = Object.fromEntries(new FormData(contactForm));
-        console.log('Cotización solicitada:', data);
+        window.location.href = buildMailtoUrl(contactForm, data);
         contactForm.reset();
         inputs.forEach((input) => {
             input.style.borderColor = '';
             input.style.boxShadow = '';
         });
-        showNotification('Tu solicitud fue registrada. Un asesor de ARMET te contactará pronto.');
+        showNotification('Tu solicitud fue preparada para enviarse a facturacion@armetpro.com.');
     });
 }

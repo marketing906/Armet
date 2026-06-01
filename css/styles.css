@@ -795,7 +795,7 @@ ul {
 }
 
 .hero-card-tecnologia {
-    background-image: url('../images home/tecnología-aplicada-a-mobiliario.jpg');
+    background-image: url('../images home/tecnologia-aplicada-mobiliario.png');
 }
 
 .tone-blue {
@@ -881,6 +881,12 @@ ul {
     height: clamp(280px, 42vw, 460px);
     object-fit: cover;
     object-position: center;
+}
+
+.content-image-band.content-image-band--contain img {
+    height: auto;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.94);
 }
 
 .section-header {
@@ -1120,10 +1126,28 @@ ul {
 
 .project-gallery-item {
     min-height: 180px;
+    height: 180px;
     border-radius: 18px;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.project-gallery-item--media {
+    margin: 0;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(15, 61, 145, 0.08);
+    box-shadow: var(--shadow-soft);
+}
+
+.project-gallery-item--media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .project-gallery-alt {
