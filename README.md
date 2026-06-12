@@ -14,11 +14,19 @@ Sitio web corporativo moderno y minimalista para Armet - Empresa de soluciones t
 
 ```
 ARMET/
-├── index.html          # Página principal
+├── inicio/
+│   └── index.html      # Página principal
+├── nosotros.html
+├── soluciones.html
+├── innovacion.html
+├── proyectos.html
+├── contacto.html
 ├── css/
 │   └── styles.css      # Estilos CSS
 ├── js/
 │   └── script.js       # JavaScript interactivo
+├── images home/        # Imágenes del sitio
+├── logos/              # Logotipos
 └── README.md           # Documentación
 ```
 
@@ -45,7 +53,7 @@ ARMET/
 
 ## 📱 Cómo Usar
 
-1. Abre el archivo `index.html` en tu navegador web
+1. Abre el archivo `inicio/index.html` en tu navegador web
 2. O usa un servidor local:
 
 ```bash
