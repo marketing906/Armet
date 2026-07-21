@@ -1820,9 +1820,13 @@ ul {
     .nav-links a {
         font-size: 1.1rem;
         color: #FFFFFF;
+        transition: color 180ms ease;
     }
 
-    .nav-links a:hover {
+    .nav-links a:not(.btn-contact):hover,
+    .nav-links a:not(.btn-contact):focus,
+    .nav-links a:not(.btn-contact):focus-visible,
+    .nav-links a:not(.btn-contact):active {
         color: var(--primary-red);
     }
 
