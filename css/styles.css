@@ -1716,25 +1716,26 @@ ul {
 
     .nav-links {
         position: fixed;
-        top: 112px;
-        left: 1rem;
-        right: 1rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         flex-direction: column;
-        align-items: stretch;
-        gap: 0.8rem;
-        padding: 1rem;
-        background: #FFFFFF;
-        border-radius: 22px;
-        box-shadow: var(--shadow-card);
-        transform: translateY(-140%);
+        align-items: center;
+        justify-content: center;
+        gap: 1.4rem;
+        padding: 6rem 1.5rem 2rem;
+        background: #004162;
+        border-radius: 0;
+        box-shadow: none;
         opacity: 0;
         pointer-events: none;
-        transition: transform var(--transition), opacity var(--transition);
+        transition: opacity var(--transition);
     }
 
     .nav-links a {
-        font-size: 0.88rem;
-        color: var(--primary-blue);
+        font-size: 1.2rem;
+        color: #FFFFFF;
     }
 
     .nav-links a:hover {
@@ -1742,7 +1743,6 @@ ul {
     }
 
     .nav-links.active {
-        transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
     }
