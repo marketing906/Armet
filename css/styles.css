@@ -534,7 +534,7 @@ ul {
     align-items: center;
     gap: 0.6rem;
     margin-bottom: 1rem;
-    color: var(--accent-gold);
+    color: var(--primary-red);
     font-size: 0.86rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -550,6 +550,15 @@ ul {
 
 .eyebrow.light {
     color: rgba(255, 255, 255, 0.85);
+}
+
+.text-accent {
+    color: var(--primary-red);
+    font-weight: inherit;
+}
+
+.text-accent.bold {
+    font-weight: 800;
 }
 
 .hero-title,
