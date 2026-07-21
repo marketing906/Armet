@@ -1,5 +1,6 @@
 const navbar = document.getElementById('navbar');
 const menuToggle = document.getElementById('menuToggle');
+const menuCloseLeft = document.getElementById('menuCloseLeft');
 const navLinks = document.getElementById('navLinks');
 const contactForm = document.getElementById('contactForm');
 const metricValues = document.querySelectorAll('.metric-value');
@@ -12,22 +13,33 @@ window.addEventListener('scroll', () => {
 });
 
 if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
+    const setMenu = (open) => {
+        menuToggle.classList.toggle('active', open);
+        navLinks.classList.toggle('active', open);
+        document.body.classList.toggle('menu-open', open);
+    };
+
+    menuToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        setMenu(!menuToggle.classList.contains('active'));
     });
+
+    if (menuCloseLeft) {
+        menuCloseLeft.addEventListener('click', (event) => {
+            event.stopPropagation();
+            setMenu(false);
+        });
+    }
 
     navLinks.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+            setMenu(false);
         });
     });
 
     document.addEventListener('click', (event) => {
-        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target) && (!menuCloseLeft || !menuCloseLeft.contains(event.target))) {
+            setMenu(false);
         }
     });
 }
