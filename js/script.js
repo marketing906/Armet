@@ -188,9 +188,9 @@ function showNotification(message, type = 'success') {
         maxWidth: '340px',
         padding: '1rem 1.2rem',
         borderRadius: '18px',
-        color: '#fff',
-        background: type === 'success' ? 'linear-gradient(135deg, #c8102e, #0f3d91)' : '#941125',
-        boxShadow: '0 18px 40px rgba(16, 32, 60, 0.22)',
+        color: '#FFFFFF',
+        background: type === 'success' ? 'linear-gradient(135deg, #B01F20, #004162)' : '#B01F20',
+        boxShadow: '0 18px 40px rgba(0, 65, 98, 0.22)',
         zIndex: '9999',
         opacity: '0',
         transform: 'translateY(-10px)',
@@ -222,8 +222,8 @@ function validateInput(input) {
         valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
     }
 
-    input.style.borderColor = valid ? '#0f3d91' : '#c8102e';
-    input.style.boxShadow = valid ? '0 0 0 4px rgba(15, 61, 145, 0.08)' : '0 0 0 4px rgba(200, 16, 46, 0.08)';
+    input.style.borderColor = valid ? '#004162' : '#B01F20';
+    input.style.boxShadow = valid ? '0 0 0 4px rgba(0, 65, 98, 0.08)' : '0 0 0 4px rgba(176, 31, 32, 0.08)';
     return valid;
 }
 
