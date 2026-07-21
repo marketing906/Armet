@@ -1711,9 +1711,20 @@ ul {
     }
 
     .menu-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         z-index: 3;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .menu-toggle:hover {
+        background: rgba(255, 255, 255, 0.2);
     }
 
     .nav-links {
