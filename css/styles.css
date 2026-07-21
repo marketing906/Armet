@@ -1712,10 +1712,8 @@ ul {
 
     .menu-toggle {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 5px;
         position: relative;
         z-index: 3;
         width: 48px;
@@ -1731,28 +1729,16 @@ ul {
         background: rgba(255, 255, 255, 0.2);
     }
 
-    .menu-toggle span {
-        display: block;
-        width: 22px;
-        height: 2px;
-        margin: 0;
-        background: #FFFFFF;
-        border-radius: 2px;
-        transform-origin: center;
-        transition: transform 220ms ease, opacity 220ms ease;
-    }
-
     .menu-toggle.active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
+        transform: translateY(12px) rotate(45deg);
     }
 
     .menu-toggle.active span:nth-child(2) {
         opacity: 0;
-        transform: scaleX(0);
     }
 
     .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
+        transform: translateY(-12px) rotate(-45deg);
     }
 
     .nav-links {
@@ -1766,7 +1752,7 @@ ul {
         align-items: center;
         justify-content: flex-start;
         gap: 1.6rem;
-        padding: 8rem 1.5rem 2rem;
+        padding: 9rem 1.5rem 2rem;
         background: #004162;
         border-radius: 0;
         box-shadow: none;
