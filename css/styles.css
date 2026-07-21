@@ -1706,8 +1706,8 @@ ul {
 
 @media (max-width: 860px) {
     .logo-image {
-        width: 138px;
-        height: 48px;
+        width: 180px;
+        height: 66px;
     }
 
     .menu-toggle {
@@ -1799,8 +1799,8 @@ ul {
     }
 
     .logo-image {
-        width: 124px;
-        height: 44px;
+        width: 150px;
+        height: 54px;
     }
 
     .logo-image-footer {
