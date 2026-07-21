@@ -80,8 +80,9 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.45rem 0;
+    padding: 1rem 0;
     gap: 2rem;
+    min-height: 96px;
 }
 
 .logo-mark {
@@ -93,8 +94,8 @@ ul {
 
 .logo-image {
     display: block;
-    width: 154px;
-    height: 54px;
+    width: 220px;
+    height: 80px;
     object-fit: contain;
     object-position: center;
     margin: 0;
@@ -1715,7 +1716,7 @@ ul {
 
     .nav-links {
         position: fixed;
-        top: 96px;
+        top: 112px;
         left: 1rem;
         right: 1rem;
         flex-direction: column;
@@ -1760,6 +1761,16 @@ ul {
 
     .hero {
         padding-top: 2rem;
+    }
+
+    .nav-content {
+        min-height: 80px;
+        padding: 0.6rem 0;
+    }
+
+    .logo-image {
+        width: 170px;
+        height: 62px;
     }
 
     .contact-info-grid {
