@@ -1,6 +1,6 @@
 const navbar = document.getElementById('navbar');
 const menuToggle = document.getElementById('menuToggle');
-const menuCloseLeft = document.getElementById('menuCloseLeft');
+const menuScrim = document.getElementById('menuScrim');
 const navLinks = document.getElementById('navLinks');
 const contactForm = document.getElementById('contactForm');
 const metricValues = document.querySelectorAll('.metric-value');
@@ -24,9 +24,8 @@ if (menuToggle && navLinks) {
         setMenu(!menuToggle.classList.contains('active'));
     });
 
-    if (menuCloseLeft) {
-        menuCloseLeft.addEventListener('click', (event) => {
-            event.stopPropagation();
+    if (menuScrim) {
+        menuScrim.addEventListener('click', () => {
             setMenu(false);
         });
     }
@@ -37,8 +36,8 @@ if (menuToggle && navLinks) {
         });
     });
 
-    document.addEventListener('click', (event) => {
-        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target) && (!menuCloseLeft || !menuCloseLeft.contains(event.target))) {
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && document.body.classList.contains('menu-open')) {
             setMenu(false);
         }
     });
