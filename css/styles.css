@@ -585,13 +585,11 @@ ul {
 
 .hero-title-detail {
     margin-top: 0.45rem;
-    max-width: 12ch;
     color: var(--primary-red);
 }
 
 .hero-title {
     font-size: clamp(2.1rem, 4.2vw, 3.92rem);
-    max-width: 12ch;
     margin-bottom: 1.25rem;
     color: var(--primary-blue-dark);
 }
