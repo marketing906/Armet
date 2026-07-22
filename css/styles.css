@@ -282,7 +282,7 @@ ul {
 .business-copy h2 {
     font-family: 'Varien', sans-serif;
     font-size: 1.54rem;
-    line-height: 0.98;
+    line-height: 1.15;
     color: var(--primary-blue-dark);
     margin-bottom: 0.9rem;
 }
@@ -574,7 +574,7 @@ ul {
 .section-title {
     font-family: 'Varien', sans-serif;
     font-weight: 700;
-    line-height: 0.98;
+    line-height: 1.15;
     letter-spacing: -0.02em;
 }
 
