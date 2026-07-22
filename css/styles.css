@@ -757,7 +757,7 @@ ul {
 .hero-frame h2 {
     font-family: 'Varien', sans-serif;
     font-size: clamp(1.4rem, 2.1vw, 1.96rem);
-    line-height: 1;
+    line-height: 1.25;
     color: var(--white);
     margin-bottom: 0.8rem;
 }
