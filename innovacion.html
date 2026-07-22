@@ -31,7 +31,6 @@
                     <li><a href="soluciones.html">Soluciones</a></li>
                     <li><a href="innovacion.html">Innovación</a></li>
                     <li><a href="proyectos.html">Proyectos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
                     <li><a href="contacto.html" class="btn-contact">Solicitar Cotización</a></li>
                 </ul>
             </div>
@@ -179,6 +178,7 @@
         if (path === '') path = 'index.html';
         var isHome = path === 'index.html';
         document.querySelectorAll('.nav-links a').forEach(function(a){
+            if (a.classList.contains('btn-contact')) return;
             var href = a.getAttribute('href');
             var hrefPath = href.split('#')[0];
             if (hrefPath === path || (isHome && href === '#inicio')) {

@@ -40,6 +40,7 @@ body {
         linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100%);
     line-height: 1.6;
     overflow-x: hidden;
+    scrollbar-gutter: stable;
 }
 
 a {
@@ -126,15 +127,19 @@ ul {
     line-height: 1.1;
 }
 
-.nav-links a.is-active::after {
+.nav-links a:not(.btn-contact)::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
     bottom: -8px;
     height: 2px;
-    background: var(--primary-red);
+    background: transparent;
     border-radius: 2px;
+}
+
+.nav-links a:not(.btn-contact).is-active::after {
+    background: var(--primary-red);
 }
 
 .nav-links a:hover {
