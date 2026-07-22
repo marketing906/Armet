@@ -1,5 +1,6 @@
 const navbar = document.getElementById('navbar');
 const menuToggle = document.getElementById('menuToggle');
+const menuScrim = document.getElementById('menuScrim');
 const navLinks = document.getElementById('navLinks');
 const contactForm = document.getElementById('contactForm');
 const metricValues = document.querySelectorAll('.metric-value');
@@ -12,22 +13,50 @@ window.addEventListener('scroll', () => {
 });
 
 if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
+    let savedScrollY = 0;
+
+    const lockScroll = () => {
+        savedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+        document.body.style.top = '-' + savedScrollY + 'px';
+    };
+
+    const unlockScroll = () => {
+        document.body.style.top = '';
+        window.scrollTo(0, savedScrollY);
+    };
+
+    const setMenu = (open) => {
+        menuToggle.classList.toggle('active', open);
+        navLinks.classList.toggle('active', open);
+        if (open) {
+            lockScroll();
+            document.body.classList.add('menu-open');
+        } else {
+            document.body.classList.remove('menu-open');
+            unlockScroll();
+        }
+    };
+
+    menuToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        setMenu(!menuToggle.classList.contains('active'));
     });
+
+    if (menuScrim) {
+        menuScrim.addEventListener('click', () => {
+            setMenu(false);
+        });
+    }
 
     navLinks.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+            setMenu(false);
         });
     });
 
-    document.addEventListener('click', (event) => {
-        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && document.body.classList.contains('menu-open')) {
+            setMenu(false);
         }
     });
 }
@@ -188,9 +217,9 @@ function showNotification(message, type = 'success') {
         maxWidth: '340px',
         padding: '1rem 1.2rem',
         borderRadius: '18px',
-        color: '#fff',
-        background: type === 'success' ? 'linear-gradient(135deg, #c8102e, #0f3d91)' : '#941125',
-        boxShadow: '0 18px 40px rgba(16, 32, 60, 0.22)',
+        color: '#FFFFFF',
+        background: type === 'success' ? 'linear-gradient(135deg, #B01F20, #004162)' : '#B01F20',
+        boxShadow: '0 18px 40px rgba(0, 65, 98, 0.22)',
         zIndex: '9999',
         opacity: '0',
         transform: 'translateY(-10px)',
@@ -222,8 +251,8 @@ function validateInput(input) {
         valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
     }
 
-    input.style.borderColor = valid ? '#0f3d91' : '#c8102e';
-    input.style.boxShadow = valid ? '0 0 0 4px rgba(15, 61, 145, 0.08)' : '0 0 0 4px rgba(200, 16, 46, 0.08)';
+    input.style.borderColor = valid ? '#004162' : '#B01F20';
+    input.style.boxShadow = valid ? '0 0 0 4px rgba(0, 65, 98, 0.08)' : '0 0 0 4px rgba(176, 31, 32, 0.08)';
     return valid;
 }
 
