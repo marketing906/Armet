@@ -31,7 +31,7 @@ html {
 }
 
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Sora', sans-serif;
     color: var(--text-main);
     background:
         radial-gradient(circle at top right, rgba(200, 16, 46, 0.12), transparent 28%),
@@ -187,7 +187,7 @@ ul {
 .page-badge-card strong {
     display: block;
     margin-bottom: 0.6rem;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.5rem;
     line-height: 1;
 }
@@ -261,7 +261,7 @@ ul {
     position: relative;
     z-index: 1;
     color: var(--white);
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.8rem;
     line-height: 1;
 }
@@ -271,7 +271,7 @@ ul {
 }
 
 .business-copy h2 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 2.2rem;
     line-height: 0.98;
     color: var(--primary-blue-dark);
@@ -368,7 +368,7 @@ ul {
     border-radius: 14px;
     background: linear-gradient(145deg, var(--primary-red), var(--primary-blue));
     color: var(--white);
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
 }
@@ -431,13 +431,13 @@ ul {
     border-radius: 14px;
     background: linear-gradient(145deg, var(--primary-red), var(--primary-blue));
     color: var(--white);
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.35rem;
     font-weight: 700;
 }
 
 .impact-step h3 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.5rem;
     line-height: 1;
     color: var(--primary-blue-dark);
@@ -511,7 +511,7 @@ ul {
 .impact-mini-card strong {
     display: block;
     margin-bottom: 0.55rem;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.4rem;
     line-height: 1;
     color: var(--primary-blue-dark);
@@ -554,7 +554,7 @@ ul {
 
 .hero-title,
 .section-title {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-weight: 700;
     line-height: 0.98;
     letter-spacing: -0.02em;
@@ -733,7 +733,7 @@ ul {
 }
 
 .hero-frame h2 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: clamp(2rem, 3vw, 2.8rem);
     line-height: 1;
     color: var(--white);
@@ -757,7 +757,7 @@ ul {
     align-items: end;
     position: relative;
     border-radius: 22px;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.35rem;
     line-height: 1;
     overflow: hidden;
@@ -852,7 +852,7 @@ ul {
 }
 
 .image-placeholder-label {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.05rem;
     font-weight: 800;
     letter-spacing: 0.14em;
@@ -1000,7 +1000,7 @@ ul {
     border-radius: 18px;
     background: linear-gradient(145deg, rgba(245, 160, 0, 0.18), rgba(15, 61, 145, 0.12));
     color: var(--primary-red);
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.45rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -1009,7 +1009,7 @@ ul {
 .solution-card h3,
 .project-content h3,
 .process-step h3 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.7rem;
     line-height: 1;
     margin-bottom: 0.75rem;
@@ -1058,7 +1058,7 @@ ul {
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.18);
     color: var(--white);
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
 }
@@ -1329,7 +1329,7 @@ ul {
 }
 
 .contact-info-card h3 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.5rem;
     line-height: 1;
     color: var(--primary-blue-dark);
@@ -1513,7 +1513,7 @@ ul {
 
 .footer h4 {
     margin-bottom: 0.85rem;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1.2rem;
     color: var(--primary-blue-dark);
 }
@@ -1601,7 +1601,7 @@ ul {
 }
 
 .whatsapp-float__label {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Varien', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.08em;
