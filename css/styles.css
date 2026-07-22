@@ -1789,6 +1789,11 @@ ul {
 
     body.menu-open {
         overflow: hidden;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        right: 0;
+        overscroll-behavior: contain;
     }
 
     body.menu-open .logo-mark {

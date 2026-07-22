@@ -13,10 +13,28 @@ window.addEventListener('scroll', () => {
 });
 
 if (menuToggle && navLinks) {
+    let savedScrollY = 0;
+
+    const lockScroll = () => {
+        savedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+        document.body.style.top = '-' + savedScrollY + 'px';
+    };
+
+    const unlockScroll = () => {
+        document.body.style.top = '';
+        window.scrollTo(0, savedScrollY);
+    };
+
     const setMenu = (open) => {
         menuToggle.classList.toggle('active', open);
         navLinks.classList.toggle('active', open);
-        document.body.classList.toggle('menu-open', open);
+        if (open) {
+            lockScroll();
+            document.body.classList.add('menu-open');
+        } else {
+            document.body.classList.remove('menu-open');
+            unlockScroll();
+        }
     };
 
     menuToggle.addEventListener('click', (event) => {
