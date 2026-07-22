@@ -1526,8 +1526,8 @@ ul {
 }
 
 .logo-image-footer {
-    width: 196px;
-    height: 70px;
+    width: 240px;
+    height: 86px;
     padding: 0;
     border-radius: 0;
     background: transparent;
@@ -1537,7 +1537,7 @@ ul {
     margin-bottom: 0.85rem;
     font-family: 'Varien', sans-serif;
     font-size: 0.84rem;
-    color: var(--primary-blue-dark);
+    color: var(--primary-red);
 }
 
 .footer li + li {
@@ -1884,8 +1884,8 @@ ul {
     }
 
     .logo-image-footer {
-        width: 170px;
-        height: 60px;
+        width: 200px;
+        height: 72px;
     }
 
     .hero-metrics,
