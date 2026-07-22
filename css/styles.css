@@ -29,6 +29,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+    overflow-x: hidden;
 }
 
 body {
@@ -1830,7 +1831,7 @@ ul {
     .nav-links {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         bottom: 0;
         height: 100vh;
         width: 85%;
@@ -1844,8 +1845,8 @@ ul {
         background: #004162;
         border-radius: 0;
         box-shadow: -6px 0 28px rgba(0, 0, 0, 0.25);
-        transform: translateX(100%);
-        transition: transform 320ms ease;
+        transition: right 320ms ease;
+        overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
@@ -1864,7 +1865,7 @@ ul {
     }
 
     .nav-links.active {
-        transform: translateX(0);
+        right: 0;
     }
 
     .hero {
