@@ -1376,9 +1376,9 @@ ul {
 
 .social-links-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
     text-align: left;
 }
 
