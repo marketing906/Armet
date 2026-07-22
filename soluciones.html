@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conoce las unidades de negocio de ARMET y nuestro proceso para equipar proyectos completos.">
     <title>Soluciones | ARMET CIA. LTDA.</title>
+    <link rel="preload" href="css/fonts.css" as="style">
+    <link rel="preload" href="fonts/Sora-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="css/styles.css?v=21">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -13,7 +15,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html#inicio" class="logo-mark" aria-label="Ir al inicio de ARMET">
-                    <img src="logos/logos-armet-rebranding2.png" alt="Logo de ARMET" class="logo-image">
+                    <img src="logos/logos-armet-rebranding2.png" alt="Logo de ARMET" class="logo-image" width="220" height="80">
                 </a>
                 <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
                     <span></span>
@@ -22,7 +24,7 @@
                 </button>
                 <ul class="nav-links" id="navLinks">
                     <li class="nav-panel-logo">
-                        <img src="logos/logos-armet-rebranding2.png" alt="Logo de ARMET">
+                        <img src="logos/logos-armet-rebranding2.png" alt="Logo de ARMET" width="180" height="80">
                     </li>
                     <li><a href="index.html#inicio">Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
@@ -217,5 +219,19 @@
     </a>
 
     <script src="js/script.js"></script>
+    <script>
+    (function(){
+        var path = location.pathname.split('/').pop() || 'index.html';
+        if (path === '') path = 'index.html';
+        var isHome = path === 'index.html';
+        document.querySelectorAll('.nav-links a').forEach(function(a){
+            var href = a.getAttribute('href');
+            var hrefPath = href.split('#')[0];
+            if (hrefPath === path || (isHome && href === '#inicio')) {
+                a.classList.add('is-active');
+            }
+        });
+    })();
+    </script>
 </body>
 </html>

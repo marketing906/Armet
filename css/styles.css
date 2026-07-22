@@ -117,12 +117,24 @@ ul {
 }
 
 .nav-links a {
+    position: relative;
     font-size: 0.84rem;
     font-weight: 800;
     color: #FFFFFF;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     line-height: 1.1;
+}
+
+.nav-links a.is-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    background: var(--primary-red);
+    border-radius: 2px;
 }
 
 .nav-links a:hover {
