@@ -1519,6 +1519,18 @@ ul {
     color: var(--primary-blue-dark);
 }
 
+.footer-social--instagram {
+    color: var(--primary-red);
+    border-color: rgba(176, 31, 32, 0.18);
+    background: rgba(176, 31, 32, 0.05);
+}
+
+.footer-social--instagram:hover {
+    background: rgba(176, 31, 32, 0.1);
+    border-color: rgba(176, 31, 32, 0.28);
+    color: var(--primary-red-dark);
+}
+
 .footer-social svg {
     width: 16px;
     height: 16px;
