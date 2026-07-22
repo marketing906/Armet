@@ -589,13 +589,9 @@ ul {
 }
 
 .hero-title {
-    font-size: clamp(1.25rem, 1.9vw, 1.5rem);
+    font-size: clamp(2.1rem, 4.2vw, 3.92rem);
     margin-bottom: 1.25rem;
     color: var(--primary-blue-dark);
-}
-
-.hero-title-lead {
-    white-space: nowrap;
 }
 
 .hero-subtitle,
@@ -1879,10 +1875,6 @@ ul {
     .logo-image {
         width: 190px;
         height: 68px;
-    }
-
-    .hero-title-lead {
-        white-space: normal;
     }
 
     .logo-image-footer {
